@@ -1,7 +1,7 @@
 import React from "react";
 import {Box, Flex, Image, Divider, useMediaQuery} from "@chakra-ui/react";
 import EventItemContent from "./EventItemContent";
-import EventItemMobileView from "../../EventItemMobileView";
+import EventItemMobileView from "./EventItemMobileView";
 
 const EventItem: React.FC<{ name: string, description: string, image: string, address: string }>
     = ({name, description, image, address}) => {
