@@ -1,5 +1,5 @@
 import EventItem from "./EventItem";
-import {Flex} from "@chakra-ui/react";
+import {Box, Flex, useMediaQuery} from "@chakra-ui/react";
 
 const DUMMY_EVENTS = [
     {
@@ -28,7 +28,7 @@ const DUMMY_EVENTS = [
         description: 'This is the event Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur cupiditate, dolore earum eveniet,' +
             '    exercitationem in itaque magni minima minus molestiae molestias natus nisi optio perspiciatis quas vel voluptas' +
             '    voluptatibus.!',
-        image: 'https://annaeverywhere.com/wp-content/uploads/2021/10/where-to-stay-in-Warsaw.jpg',
+        image: 'https://promocja.fais.uj.edu.pl/documents/144868508/144944556/Wydzial_FAIS_UJ_1.jpg',
         address: 'Warsaw 2',
         author: 'User 2',
         attendees: ['User 2', 'User 3'],
@@ -36,8 +36,12 @@ const DUMMY_EVENTS = [
 ];
 
 const EventList = () => {
+    const [isMobile] = useMediaQuery('(max-width: 768px)');
+
+    const isMobileProps = !isMobile ? {w: '50%'} : {w: '90%', margin: 'auto'};
+
     return (
-      <Flex w='50%' flexDirection='column'>
+        <Flex {...isMobileProps} flexDirection='column'>
           {DUMMY_EVENTS.map(event => (
               <EventItem key={event.id}
                          name={event.name}
