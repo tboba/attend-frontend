@@ -3,8 +3,6 @@ import {Flex} from "@chakra-ui/react";
 
 const Layout: React.FC<{children: React.ReactNode}> = ({children}) => {
     return <Flex
-        flexDirection='column'
-        alignItems='center'
         h='100vh'
         minH='100vh'
         backgroundColor='#f2f4f7'

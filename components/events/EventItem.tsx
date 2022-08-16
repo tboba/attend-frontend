@@ -11,11 +11,11 @@ const EventItem: React.FC<{ name: string, description: string, image: string, ad
             <Divider orientation='vertical' h='80%' m='auto 1em'/>
             <Flex flex={4} flexDirection='column'>
                 <Flex justifyContent='space-between' marginTop='0.5em'>
-                    <Text>{name}</Text>
-                    <Text fontStyle='italic' marginRight='1em'>{address}</Text>
+                    <Text fontSize='1.5em' fontFamily='Montserrat' fontWeight='600'>{name}</Text>
+                    <Text fontStyle='italic' fontFamily='Montserrat' fontWeight='300' marginRight='1em'>{address}</Text>
                 </Flex>
                 <Flex alignSelf='flex-start' margin='auto 20% auto 0'>
-                    <Text noOfLines={2}>{description}</Text>
+                    <Text fontFamily='Montserrat' fontWeight='400' noOfLines={2}>{description}</Text>
                 </Flex>
             </Flex>
         </Flex>
