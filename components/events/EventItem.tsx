@@ -1,5 +1,6 @@
 import React from "react";
-import {Image, Text, Flex, Divider} from "@chakra-ui/react";
+import {Image, Flex, Divider} from "@chakra-ui/react";
+import EventItemContent from "./EventItemContent";
 
 const EventItem: React.FC<{ name: string, description: string, image: string, address: string }>
     = ({name, description, image, address}) => {
@@ -9,15 +10,7 @@ const EventItem: React.FC<{ name: string, description: string, image: string, ad
                 <Image src={image} alt={name}/>
             </Flex>
             <Divider orientation='vertical' h='80%' m='auto 1em'/>
-            <Flex flex={4} flexDirection='column'>
-                <Flex justifyContent='space-between' marginTop='0.5em'>
-                    <Text fontSize='1.5em' fontFamily='Montserrat' fontWeight='600'>{name}</Text>
-                    <Text fontStyle='italic' fontFamily='Montserrat' fontWeight='300' marginRight='1em'>{address}</Text>
-                </Flex>
-                <Flex alignSelf='flex-start' margin='auto 20% auto 0'>
-                    <Text fontFamily='Montserrat' fontWeight='400' noOfLines={2}>{description}</Text>
-                </Flex>
-            </Flex>
+            <EventItemContent name={name} address={address} description={description}/>
         </Flex>
     );
 }
