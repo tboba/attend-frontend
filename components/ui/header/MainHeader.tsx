@@ -1,13 +1,13 @@
-import {Flex, Text} from "@chakra-ui/react";
+import {Box, Flex, Text} from "@chakra-ui/react";
 import MainNavigation from "./MainNavigation";
 
 const MainHeader = () => {
-    return <header>
-        <Flex justifyContent='space-between'>
+    return <Box as='header' alignSelf='stretch'>
+        <Flex w='100%' h='5rem' alignItems='center' justifyContent='space-between' padding='0 10%'>
             <Text fontFamily='Acme' fontSize='2em'>Attend</Text>
             <MainNavigation />
         </Flex>
-    </header>
+    </Box>
 }
 
 export default MainHeader;
