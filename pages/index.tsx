@@ -4,8 +4,10 @@ import {Divider, useMediaQuery} from "@chakra-ui/react";
 import SearchTab from "../components/ui/SearchTab";
 import Layout from "../components/layout/Layout";
 import CenteredSubLayout from "../components/layout/CenteredSubLayout";
-import {Fragment} from "react";
+import React, {Fragment} from "react";
+import SearchContextProvider from "../store/search-store";
 import MainFooter from "../components/ui/MainFooter";
+import MainHeader from "../components/ui/header/MainHeader";
 
 const App: NextPage = () => {
     const [isMobile] = useMediaQuery('(max-width: 768px)');
@@ -13,12 +15,14 @@ const App: NextPage = () => {
     return (
         <Fragment>
             <Layout>
-                {/*<MainHeader />*/}
                 <CenteredSubLayout>
-                    <SearchTab/>
-                    {!isMobile && <Divider orientation='horizontal' w='60%'/>}
-                    <EventList/>
-                    <MainFooter />
+                    <SearchContextProvider>
+                        <MainHeader/>
+                        <SearchTab/>
+                        {!isMobile && <Divider orientation='horizontal' w='60%'/>}
+                        <EventList/>
+                        <MainFooter />
+                    </SearchContextProvider>
                 </CenteredSubLayout>
             </Layout>
         </Fragment>
