@@ -6,7 +6,7 @@ const MainNavigation = () => {
     return <nav>
         <Flex m={0} p={0} alignItems='baseline'>
             <Box marginLeft='3rem'>
-                <NavLink href='/'>Home</NavLink>
+                <NavLink href='/' exact>Home</NavLink>
             </Box>
             <Box marginLeft='3rem'>
                 <NavLink href='login'>Login</NavLink>
