@@ -1,8 +1,8 @@
 import EventItem from "./EventItem";
 import {Flex, useMediaQuery} from "@chakra-ui/react";
 import {useContext} from "react";
-import {SearchContext} from "../../store/search-store";
-import NoEventsLabel from "../ui/NoEventsLabel";
+import {SearchContext} from "../../../store/search-store";
+import NoEventsLabel from "../../ui/NoEventsLabel";
 
 const DUMMY_EVENTS = [
     {
@@ -52,6 +52,7 @@ const EventList = () => {
             {allEvents.length !== 0 &&
                 allEvents.map(event => (
                     <EventItem key={event.id}
+                               id={event.id}
                                name={event.name}
                                description={event.description}
                                image={event.image}
