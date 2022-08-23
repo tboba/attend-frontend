@@ -9,10 +9,10 @@ const MainNavigation = () => {
                 <NavLink href='/' exact>Home</NavLink>
             </Box>
             <Box marginLeft='3rem'>
-                <NavLink href='login'>Login</NavLink>
+                <NavLink href='/login'>Login</NavLink>
             </Box>
             <Box marginLeft='2rem'>
-                <Link href='register'>
+                <Link href='/register'>
                     <Button colorScheme='teal' variant='outline'>
                         Register
                     </Button>

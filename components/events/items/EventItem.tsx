@@ -10,7 +10,7 @@ const EventItem: React.FC<{ id: string, name: string, description: string, image
     const router = useRouter();
 
     const handleItemClick = async () => {
-        await router.push(`/${id}`);
+        await router.push(`/details/${id}`);
     }
 
     return (

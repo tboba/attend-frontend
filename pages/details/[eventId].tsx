@@ -1,6 +1,6 @@
-import EventDetail from "../components/events/items/detail/EventDetail";
-import MeetupEvent from "../models/MeetupEvent";
-import RegisteredUser from "../models/RegisteredUser";
+import EventDetail from "../../components/events/items/detail/EventDetail";
+import MeetupEvent from "../../models/MeetupEvent";
+import RegisteredUser from "../../models/RegisteredUser";
 
 const DUMMY_EVENT = {
         id: 'p1',
