@@ -20,20 +20,26 @@ const MainNavigation = () => {
         </Box>
     </Fragment>
 
-    return <nav>
+    const userSignedIn = <Fragment>
+        <Box marginLeft='3rem'>
+            <NavLink href='/new-event'>Add an Event</NavLink>
+        </Box>
+        <Box marginLeft='2rem'>
+            <Button colorScheme='teal' variant='outline' onClick={() => signOut()}>
+                Logout
+            </Button>
+        </Box>
+    </Fragment>
+
+    return <Box as='nav'>
         <Flex m={0} p={0} alignItems='baseline'>
             <Box marginLeft='3rem'>
                 <NavLink href='/' exact>Home</NavLink>
             </Box>
             {!session && userNotSignedIn}
-            {session && <Box marginLeft='2rem'>
-                    <Button colorScheme='teal' variant='outline' onClick={() => signOut()}>
-                        Logout
-                    </Button>
-            </Box>
-            }
+            {session && userSignedIn}
         </Flex>
-    </nav>
+    </Box>
 }
 
 export default MainNavigation;
