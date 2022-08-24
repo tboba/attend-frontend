@@ -5,7 +5,7 @@ import CenteredSubLayout from "../components/layout/CenteredSubLayout";
 import MainHeader from "../components/ui/header/MainHeader";
 import MainFooter from "../components/ui/MainFooter";
 import React from "react";
-import UserContextProvider from "../store/user-store";
+import {SessionProvider} from "next-auth/react";
 
 function MyApp({Component, pageProps}: AppProps) {
     const [isMobile] = useMediaQuery('(max-width: 768px)');
@@ -13,11 +13,11 @@ function MyApp({Component, pageProps}: AppProps) {
     return <ChakraProvider>
         <Layout>
             <CenteredSubLayout>
-                <UserContextProvider>
+                <SessionProvider session={pageProps.session}>
                     <MainHeader/>
                     {!isMobile && <Divider orientation='horizontal' w='60%'/>}
                     <Component {...pageProps} />
-                </UserContextProvider>
+                </SessionProvider>
 
                 <MainFooter/>
             </CenteredSubLayout>
