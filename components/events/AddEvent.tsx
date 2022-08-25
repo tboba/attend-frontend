@@ -22,7 +22,7 @@ const AddEvent: React.FC = () => {
                 ></Textarea>
             </Box>
             <Button
-                mt={4}
+                mt='4'
                 colorScheme='teal'
                 type='submit'
             >Add Event</Button>

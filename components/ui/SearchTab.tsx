@@ -6,7 +6,6 @@ const SearchTab: React.FC = () => {
     const searchCtx = useContext(SearchContext);
 
     const handleInputChange = (event: ChangeEvent) => {
-        console.log('preparing to set');
         searchCtx.debounce(event.target.value);
     }
 

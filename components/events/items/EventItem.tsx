@@ -15,9 +15,9 @@ const EventItem: React.FC<{ id: string, name: string, description: string, image
 
     return (
         <Box>{!isMobile ?
-            <Flex m='1rem 0' maxH='8rem' borderWidth='1px' borderRadius='1em' overflow='hidden' flexGrow={1}
+            <Flex m='1rem 0' maxH='8rem' borderWidth='1px' borderRadius='1em' overflow='hidden' flexGrow='1'
                   cursor='pointer' onClick={handleItemClick}>
-                <Flex flex={1}>
+                <Flex flex='1'>
                     <Image src={image} alt={name} fit='contain'/>
                 </Flex>
                 <Divider orientation='vertical' h='80%' m='auto 1em'/>

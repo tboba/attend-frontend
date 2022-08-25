@@ -32,7 +32,7 @@ const MainNavigation = () => {
     </Fragment>
 
     return <Box as='nav'>
-        <Flex m={0} p={0} alignItems='baseline'>
+        <Flex m='0' p='0' alignItems='baseline'>
             <Box marginLeft='3rem'>
                 <NavLink href='/' exact>Home</NavLink>
             </Box>

@@ -3,7 +3,7 @@ import React from "react";
 
 const EventItemContent: React.FC<{name: string, address: string, description: string}> = ({name, address, description}) => {
     return (
-        <Flex flex={4} flexDirection='column'>
+        <Flex flex='4' flexDirection='column'>
             <Flex justifyContent='space-between' marginTop='0.5em'>
                 <Heading fontSize='1.5em' fontFamily='Montserrat' fontWeight='600' noOfLines={1}>{name}</Heading>
                 <Text fontStyle='italic' fontFamily='Montserrat' fontWeight='300' marginRight='1em'>{address}</Text>

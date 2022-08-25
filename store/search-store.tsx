@@ -17,7 +17,6 @@ const SearchContextProvider: React.FC<{ children: React.ReactNode }> = (props) =
 
     const handleSearchValueChange = debounce(async (newSearchValue) => {
         setSearchValue(newSearchValue);
-        console.log('debounced!');
     }, 300);
 
     const contextValue: SearchContextObj = {
